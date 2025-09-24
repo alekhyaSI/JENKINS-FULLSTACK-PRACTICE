@@ -17,7 +17,7 @@ const FoodManager = () => {
   const [message, setMessage] = useState('');
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = 'http://localhost:2001/foodapi';// Directly using backend URL
+  const baseUrl = 'http://localhost:2030/foodapi';// Directly using backend URL
 
   useEffect(() => {
     fetchAllFoods();
