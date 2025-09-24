@@ -30,8 +30,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('FOODDELIVARY-SPRINGBOOT') {
-                    // 👇 Skips tests to avoid Surefire memory crash
-                    bat 'mvn clean package -DskipTests'
+                    bat 'mvn clean package'
                 }
             }
         }
@@ -46,7 +45,7 @@ pipeline {
                 if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootfoodapi" (
                     rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootfoodapi"
                 )
-                copy "FOODDELIVARY-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootfoodapi.war"
+                copy "FOODDELIVARY-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
                 '''
             }
         }
