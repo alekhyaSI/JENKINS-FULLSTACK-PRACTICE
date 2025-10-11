@@ -45,7 +45,7 @@ pipeline {
                 if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootfoodapi" (
                     rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootfoodapi"
                 )
-                copy "STUDENTAPI-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
+                copy "FOODDELIVARY-SPRINGBOOT\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\"
                 '''
             }
         }
