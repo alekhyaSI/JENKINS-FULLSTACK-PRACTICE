@@ -11,7 +11,7 @@ import com.klef.dev.service.FoodService;
 
 @RestController
 @RequestMapping("/foodapi")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
   // Allow your frontend (React/Angular)
 public class FoodController {
 
