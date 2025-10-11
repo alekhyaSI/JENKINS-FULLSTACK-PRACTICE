@@ -27,7 +27,7 @@ const FoodManager = () => {
     try {
       const res = await axios.get(`${baseUrl}/all`);
       setFoods(res.data);
-    } catch (error) {
+    } catch {
       setMessage('Failed to fetch foods.');
     }
   };
@@ -52,7 +52,7 @@ const FoodManager = () => {
       setMessage('Food item added successfully.');
       fetchAllFoods();
       resetForm();
-    } catch (error) {
+    } catch {
       setMessage('Error adding food item.');
     }
   };
@@ -64,7 +64,7 @@ const FoodManager = () => {
       setMessage('Food item updated successfully.');
       fetchAllFoods();
       resetForm();
-    } catch (error) {
+    } catch {
       setMessage('Error updating food item.');
     }
   };
@@ -73,7 +73,7 @@ const FoodManager = () => {
       const res = await axios.delete(`${baseUrl}/delete/${id}`);
       setMessage(res.data);
       fetchAllFoods();
-    } catch (error) {
+    } catch {
       setMessage('Error deleting food item.');
     }
   };
@@ -83,7 +83,7 @@ const FoodManager = () => {
       const res = await axios.get(`${baseUrl}/get/${idToFetch}`);
       setFetchedFood(res.data);
       setMessage('');
-    } catch (error) {
+    } catch {
       setFetchedFood(null);
       setMessage('Food item not found.');
     }
