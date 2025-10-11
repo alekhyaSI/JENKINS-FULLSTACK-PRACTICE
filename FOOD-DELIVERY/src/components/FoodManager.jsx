@@ -17,7 +17,7 @@ const FoodManager = () => {
   const [message, setMessage] = useState('');
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = 'http://localhost:2030/foodapi';
+  const baseUrl = 'http://localhost:2030/springbootfoodapi';
 
 
   useEffect(() => {
